@@ -1,0 +1,35 @@
+{
+  "update_url": "https://clients2.google.com/service/update2/crx",
+  "name": "Calz Chrome Start 2018",
+  "version": "0.00.01",
+  "manifest_version": 2,
+  "description": "Replace your new tab with a minimalistic and customizable homepage featuring a clock, todo list, weather, bookmarks and much more!",
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "permissions": [
+    "geolocation",
+    "storage",
+    "topSites",
+    "identity"
+  ],
+  "optional_permissions": [
+    "http://*/",
+    "https://*/"
+  ],
+  "chrome_url_overrides": {
+    "newtab": "index.html"
+  },
+  "background": {
+    "scripts": ["js/jquery.min.js", "js/background.js"]
+  },
+  "oauth2": {
+    "client_id": "1051811224060-5pnjmvq5pltt4n6pcsntpt6p1jt035h0.apps.googleusercontent.com",
+    "scopes": [
+      "https://www.googleapis.com/auth/calendar"
+    ]
+  },
+  "content_security_policy": "script-src 'self' https://accounts.google.com/ https://calendar.google.com https://api.forismatic.com https://ajax.googleapis.com https://www.leoh.io https://query.yahooapis.com https://www.google-analytics.com; object-src 'self'"
+}
