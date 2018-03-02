@@ -26,29 +26,7 @@ Widgets?
 <body>
     <div id="bg"></div>
     <div id="altBg"></div>
-    <div class="reviewNotification" id="reviewNotification">
-        <p id="optionsGreeting">Howdy friend. Leoh is 100% free.</p>
-        <p id="subscribeBlurb">Please take 15 seconds and leave a review. Thanks!</p>
-        <div class="noBtn">
-        <button class="actionBtn reviewNo" id="notInterestedBtn">X</button>
-        </div>
-        <div class="actionBtns">
-        <button class="actionBtn review" id="interestedBtn">Sure! I'll review it</button>
-        </div>
 
-    </div>
-    <div class="reviewNotification" id="contactNotification">
-        <p id="optionsGreeting">Like Leoh? Please share with friends.</p>
-        <p id="subscribeBlurb">Sharing the link below means the WORLD to us:</p>
-        <input type="text" class="optionsTextbox" value="https://leoh.io/chrome">
-        <div class="noBtn">
-            <button class="actionBtn socialNo" id="notInterestedBtn">X</button>
-        </div>
-        <div class="actionBtns">
-            <button class="actionBtn facebook" id="interestedBtn"><i class="fa fa-facebook" aria-hidden="true"></i></button>
-            <button class="actionBtn twitter" id="interestedBtn"><i class="fa fa-twitter" aria-hidden="true"></i></button>
-        </div>
-    </div>
     <div id="zenVideoPlayer" style="position: fixed; z-index: -1; width: 1920px; height: 1080px; display:none">
         <iframe frameborder="0" height="100%" width="100%">
         </iframe>
@@ -141,26 +119,12 @@ Widgets?
             <option value="economics">Economics</option>
             <option value="books">Books</option>
             <option value="space">Space</option>
-            <option value="sports">Sports</option>
-            <option value="soccer">Soccer</option>
-            <option value="nfl">NFL</option>
-            <option value="NBA">NBA</option>
-            <option value="cfb">College Football</option>
-            <option value="fantasyfootball">Fantasy Football</option>
-            <option value="mlb">MLB</option>
-            <option value="mma">MMA</option>
-            <option value="hockey">Hockey</option>
-            <option value="nascar">Nascar</option>
-            <option value="formula1">Formula 1</option>
             <option value="gadgets">Tech Gadgets</option>
-            <option value="philosophy">Philosophy</option>
-            <option value="europe">Europe</option>
             <option value="apple">Apple</option>
-            <option value="games">Games</option>
-            <option value="leagueoflegends">League of Legends</option>
-            <option value="canada">Canada</option>
             <option value="entertainment">Entertainment</option>
-            <option value="bitcoin">Bitcoin</option>
+            <option value="sports">Sports</option>
+            <option value="nfl">NFL</option>
+            <option value="mlb">MLB</option>
         </select></p>
         <div id="newsArticles"></div>
     </div>
@@ -202,7 +166,7 @@ Widgets?
     <div id="optionsMenuBlur"></div>
     <div id="optionsMenu">
         <p id="optionsGreeting">
-            <a title="Visit leoh.io" target="_blank" href="https://leoh.io/">
+            <a target="_blank" href="">
                 <img id="logo" src="icons/icon19.png" /></a>Options & Settings</p> <!-- 38x21 -->
         <div id="leftOptions">
             <span id="generalOptionsHeader"><p id="optionsHeader"><span id="optionsItemIcon"><i class="fa fa-cogs fa-fw" ></i></span> General</p>
@@ -222,7 +186,7 @@ Widgets?
             <span id="clockOptionsHeader"><p id="optionsHeader"><span id="optionsItemIcon"><i class="fa fa-clock-o fa-fw"></i></span> Clock</p>
             </span>
             <p id="optionsGreeting"></p>
-            <span id="updateOptionsHeader"><p id="optionsHeader"><span id="optionsItemIcon"><i class="fa fa-refresh fa-fw"></i></span> New Update<span id="notificationOptions" class="notification">!</span></p>
+            <!-- <span id="updateOptionsHeader"><p id="optionsHeader"><span id="optionsItemIcon"><i class="fa fa-refresh fa-fw"></i></span> New Update<span id="notificationOptions" class="notification">!</span></p> -->
             </span>
             <span id="aboutOptionsHeader"><p id="optionsHeader"><span id="optionsItemIcon"><i class="fa fa-question-circle fa-fw"></i></span> About</p>
             </span>
@@ -321,7 +285,7 @@ Widgets?
             </div>
             <div id="quickLinksOptions">
                 <textarea id="quickLinksSave" spellcheck="false">
-                    Google http://google.com YouTube http://youtube.com leoh http://leoh.io
+                    Google http://google.com YouTube http://youtube.com
                 </textarea>
                 <br>
                 <input type="checkbox" name="optionsDisableQuickLinks" id="optionsDisableQuickLinks">
@@ -462,22 +426,9 @@ Widgets?
                 <input type="checkbox" name="optionsDisableZen" id="optionsDisableZen">
                         <label class="checkInput" for="optionsDisableZen">Hide Zen Icon</label><span id="gap"></span>
             </div>
-            <div id="update">
-                <p class="updateHeader"><u>You're running the latest version of leoh (v0.22.19)!</u></p>
-                <ul id="updateList">
-			               <li>After careful consideration we've decided to show ads far less often.</li>
-                </ul>
-                <p class="updateHeader">Thank you for using Leoh! <i class="fa fa-heart"></i>
-                    <p>
-                        <input type="checkbox" id="validUpdate" style="display:none">
-            </div>
             <div id="aboutOptions">
                 <div id="about">
-                    <p class="aboutSection">Leoh is a free personal dashboard designed to make your life more productive.
-                        <br><br>Leoh is a work in progress and updated regularly. <br /><br />We are 100% free, if you have 30 seconds please leave an honest review:</p>
-                    <a href="https://leoh.io/chrome" target="_blank">
-                        <p id="rateItem"><span><i class="fa fa-thumbs-o-up"></i></span> Rate Leoh on Chrome Store</p>
-                    </a>
+                    <p class="aboutSection"></p>
                 </div>
             </div>
             <button id="saveBtn">Save & Apply</button>
@@ -485,25 +436,6 @@ Widgets?
         </div>
     </div>
     <div id="optionsIcon"><i title="Options" class="fa fa-cog"></i><span class="notification">!</span></div>
-    <h3 id="location"><a href="http://bit.ly/2yJd8zn" target="_blank">Ad Sumo.com - grow your email list</a></h3>
-    <div id="welcome_newInstaller">
-        <p id="welcome">Hiya!</p>
-        <p id="underWelcome">Welcome to <span id="leoh">leoh</span></p>
-        <br>
-        <hr>
-        <p id="howto">
-            <span id="numb">1.</span> Eveything is automatically saved and synced. Yay!
-            <br><br>
-            <span id="numb">2.</span> The gear wheel (<i class="fa fa-cog"></i>) is your options panel.
-            <br><br>
-            <span id="numb">3.</span> Quick Links (<i class="fa fa-ellipsis-v"></i><i class="fa fa-ellipsis-v"></i><i class="fa fa-ellipsis-v"></i>) for quick access to your bookmarks, apps, and history.
-            <br><br>
-            <span id="numb">4.</span> Tell 1 friend. leoh.io new tab is 100% free. If you LOVE it, please tell 1 person :)
-            <br>
-        </p>
-            <br>
-            <button id="welcome_confirm">Cool, I got it!</button>
-    </div>
     <script src="js/moment.js"></script>
     <script src="js/func.js"></script>
     <script src="js/load.js"></script>

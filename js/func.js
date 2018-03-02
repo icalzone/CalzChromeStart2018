@@ -1,8 +1,8 @@
-    var rands = Math.floor(Math.random() * 6) + 1;
-    console.log(rands);
-    if( rands == 1) {
-      $('#location').show();
-    }
+    // var rands = Math.floor(Math.random() * 6) + 1;
+    // console.log(rands);
+    // if( rands == 1) {
+    //   $('#location').show();
+    // }
 
     function randImage() {
         $('#bg').css('background-image', "");
@@ -102,30 +102,15 @@
             $('#welcome_newInstaller').hide();
             $('#time').show();
         });
-        chrome.storage.sync.set({ getValidUpdate: true });
-        chrome.storage.sync.set({ showReviews: moment().add(1, 'days').format('YYYY-MM-DD') });
-        chrome.storage.sync.set({ showSocial: moment().add(3, 'days').format('YYYY-MM-DD') });
-        fetch('https://leoh.io/dashboard/action.php?action=new_user').then(() => {
-            console.log('sent new user');
-        }).catch((e) => {
-            console.log('failed to send new user', e);
-        });
+        // chrome.storage.sync.set({ getValidUpdate: true });
+        // chrome.storage.sync.set({ showReviews: moment().add(1, 'days').format('YYYY-MM-DD') });
+        // chrome.storage.sync.set({ showSocial: moment().add(3, 'days').format('YYYY-MM-DD') });
+        // fetch('https://leoh.io/dashboard/action.php?action=new_user').then(() => {
+            // console.log('sent new user');
+        // }).catch((e) => {
+            // console.log('failed to send new user', e);
+        // });
     }
-
-    chrome.storage.sync.get({ showReviews: moment().add(1, 'days').format('YYYY-MM-DD') }, function(result) {
-        var curr = moment().format('YYYY-MM-DD');
-        console.log(curr);
-        console.log(moment(result.showReviews));
-        if(moment(curr).isAfter(moment(result.showReviews)) || moment(curr).isSame(moment(result.showReviews))) {
-            $('#reviewNotification').show();
-            $('#reviewNotification .actionBtn').click(function() {
-                $('#reviewNotification').hide();
-                chrome.storage.sync.set({ showReviews: moment().add(99999999, 'days').format('YYYY-MM-DD') });
-            });
-            console.log("Show Review Options");
-            ga('send', 'event', 'review panel shown', 'click', 'button');
-        }
-    });
 
     chrome.storage.sync.get({ showSocial: moment().add(3, 'days').format('YYYY-MM-DD') }, function(result) {
         var curr = moment().format('YYYY-MM-DD');
@@ -225,15 +210,6 @@
     $('.twitter').click(function() {
         window.open("https://twitter.com/home?status=Check%20out%20the%20Leoh%20Chrome%20extension!%20It%20replaces%20your%20boring%20new%20tab%20with%20a%20fantastic%20new%20design. https://leoh.io/chrome", "_blank");
         ga('send', 'event', 'shared on twitter', 'click', 'button');
-    });
-
-    $('.review').click(function() {
-        window.open("https://chrome.google.com/webstore/detail/leoh-new-tab/ijhhakihjccpanbibbcceofpjnebokcb/reviews", "_blank");
-        ga('send', 'event', 'wrote review', 'click', 'button');
-    });
-
-    $('.reviewNo').click(function() {
-        ga('send', 'event', 'ignored review', 'click', 'button');
     });
 
     $('.socialNo').click(function() {

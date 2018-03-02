@@ -5,23 +5,6 @@
     //$('#welcome_newInstaller').hide();
     //$('#searchResults').hide();
 
-    // payments begin
-    // var statusText = {
-    //     upgrade: 'Upgrade',
-    //     active: 'Active'
-    // };
-    //getPurchases();
-    // chrome.storage.sync.get({ 'subscriptionActive': 'ACTIVE' }, function(result) {
-    //     subscriptionActive = result.subscriptionActive;
-    // });
-
-    // var activeSubscriptions;
-    // var activeSubscriptionsSku;
-    // var userLoggedIn;
-    // var subscriptionActive;
-
-    // payments end
-
     chrome.storage.sync.get({
         'customImage': false,
         'customColor': false,
@@ -252,34 +235,10 @@ setTimeout(function() {
         }
     });
 
-    // var currVersion = getVersion();
-    // var prevVersion = localStorage['version']
-    // if (currVersion != prevVersion) {
-    //     // Check if we just installed this extension.
-    //     if (typeof prevVersion == 'undefined') {
-    //         onInstall();
-    //         // ga('send', 'event', 'install_button', 'click', 'button');
-    //     } else {
-    //         onUpdate();
-    //     }
-    //     localStorage['version'] = currVersion;
-    // }
-
-    // chrome.storage.sync.get({ getValidUpdate: false }, function(getUpdate) {
-    //     console.log(getUpdate.getValidUpdate);
-    //     if (getUpdate.getValidUpdate == true) {
-    //         document.getElementById('validUpdate').checked = true;
-    //         $('.notification').show();
-    //     } else {
-    //         document.getElementById('validUpdate').checked = false;
-    //     }
-
+    // $('#welcome_confirm').click(function() {
+    //     $('#welcome_newInstaller').hide();
+    //     $('#time').show();
     // });
-
-    $('#welcome_confirm').click(function() {
-        $('#welcome_newInstaller').hide();
-        $('#time').show();
-    });
 
     $('#updateOptionsHeader').click(function() {
         chrome.storage.sync.set({ getValidUpdate: false });
@@ -1481,7 +1440,6 @@ setTimeout(function() {
         $("#todoListOptions").hide();
         $("#generalOptions").hide();
         $("#about").hide();
-        $("#update").hide();
     });
 
     $('#quickLinksTextbox').hide();
@@ -1502,7 +1460,6 @@ setTimeout(function() {
         $("#generalOptions").hide();
         $("#quickLinksOptions").hide();
         $("#about").hide();
-        $("#update").hide();
     });
 
     $("#weatherOptions").hide();
@@ -1518,7 +1475,6 @@ setTimeout(function() {
         $("#quickLinksOptions").hide();
         $("#backgroundOptions").hide();
         $("#about").hide();
-        $("#update").hide();
     });
 
     $("#clockOptions").hide();
@@ -1534,7 +1490,6 @@ setTimeout(function() {
         $("#backgroundOptions").hide();
         $("#weatherOptions").hide();
         $("#about").hide();
-        $("#update").hide();
     });
 
     $("#zenModeOptions").hide();
@@ -1550,7 +1505,6 @@ setTimeout(function() {
         $("#backgroundOptions").hide();
         $("#weatherOptions").hide();
         $("#about").hide();
-        $("#update").hide();
     });
 
     $("#socialOptions").hide();
@@ -1566,7 +1520,6 @@ setTimeout(function() {
         $("#weatherOptions").hide();
         $("#clockOptions").hide();
         $("#about").hide();
-        $("#update").hide();
     });
 
     $("#todoListOptions").hide();
@@ -1582,7 +1535,6 @@ setTimeout(function() {
         $("#socialOptions").hide();
         $("#zenModeOptions").hide();
         $("#about").hide();
-        $("#update").hide();
     });
 
     $("#generalOptions").show();
@@ -1598,7 +1550,6 @@ setTimeout(function() {
         $("#todoListOptions").hide();
         $("#zenModeOptions").hide();
         $("#about").hide();
-        $("#update").hide();
     });
 
     $("#about").hide();
@@ -1611,23 +1562,6 @@ setTimeout(function() {
         $("#weatherOptions").hide();
         $("#clockOptions").hide();
         $('#saveBtn').hide();
-        $("#zenModeOptions").hide();
-        $("#socialOptions").hide();
-        $("#todoListOptions").hide();
-    });
-
-    $("#update").hide();
-    $("#updateOptionsHeader").click(function() {
-        ga('send', 'event', 'new_update', 'click', 'opened');
-        $('.notification').hide();
-        $("#update").show();
-        $("#about").hide();
-        $('#saveBtn').hide();
-        $("#generalOptions").hide();
-        $("#quickLinksOptions").hide();
-        $("#backgroundOptions").hide();
-        $("#weatherOptions").hide();
-        $("#clockOptions").hide();
         $("#zenModeOptions").hide();
         $("#socialOptions").hide();
         $("#todoListOptions").hide();
