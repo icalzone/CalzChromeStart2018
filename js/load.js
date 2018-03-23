@@ -2,8 +2,6 @@
     //$('#greeting').hide();
     $('.notification').css('display','inline-block').hide();
     $('.todoListNotification').css('display','inline-block').hide();
-    //$('#welcome_newInstaller').hide();
-    //$('#searchResults').hide();
 
     chrome.storage.sync.get({
         'customImage': false,
@@ -1052,15 +1050,10 @@ setTimeout(function() {
         if (e.keyCode == 13) {
             var searchTerm = document.getElementById('searchTextbox').value;
             searchTerm = searchTerm.replace('?', '');
-            $('#searchResults').show();
-            document.getElementById('searchFrame').src = 'https://leoh.io/search/?cx=partner-pub-0576076987909084%3A6866581994&cof=FORID%3A10&ie=UTF-8&q=' + searchTerm;
+            var searchUrl = "https://cse.google.com/cse/publicurl?cx=003353976804132517816:gme0kwvw5bm&q="+searchTerm;
             ga('send', 'event', 'made_Google_search', 'click', 'opened');
+            window.open(searchUrl,'_self');
         }
-    });
-
-    $('#searchClose').click(function() {
-        $('.searchEngine').hide();
-        $('#searchResults').hide();
     });
 
     $("#linkApps").click(function() {
@@ -1732,14 +1725,6 @@ setTimeout(function() {
             getNews();
         }
     });
-
-    //Google search
-
-    var googleSearchIframeName = "cse-search-results";
-    var googleSearchFormName = "cse-search-box";
-    var googleSearchFrameWidth = 800;
-    var googleSearchDomain = "www.google.com";
-    var googleSearchPath = "";
 
     // Standard Google Universal Analytics code
     (function(i, s, o, g, r, a, m) {
