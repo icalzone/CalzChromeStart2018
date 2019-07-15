@@ -31,5 +31,5 @@
       "https://www.googleapis.com/auth/calendar"
     ]
   },
-  "content_security_policy": "script-src 'self' https://accounts.google.com/ https://calendar.google.com https://api.forismatic.com https://ajax.googleapis.com https://www.leoh.io https://query.yahooapis.com https://www.google-analytics.com; object-src 'self'"
+  "content_security_policy": "script-src 'self' https://accounts.google.com/ https://calendar.google.com https://api.forismatic.com https://ajax.googleapis.com https://www.leoh.io https://query.yahooapis.com https://www.google-analytics.com https://darksky.net/; object-src 'self'"
 }
