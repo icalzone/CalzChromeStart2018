@@ -13,12 +13,12 @@ function randImage() {
       console.log(imageInteger);
       if (imageInteger == 0) {
         $("#bg").css("background-image", "url(images/image_0.jpg)");
-        $("#altBg").css("background-image", "url(http://stuff.ells.family/bkgnds/image_1.jpg)");
+        $("#altBg").css("background-image", "url(http://stuff.ellzzoo.com/bkgnds/image_1.jpg)");
         chrome.storage.sync.set({ imageInteger: imageInteger + 1 });
       } else if (imageInteger == 329) {
         $("#bg").css(
           "background-image",
-          "url(http://stuff.ells.family/bkgnds/image_" + imageInteger + ".jpg)"
+          "url(http://stuff.ellzzoo.com/bkgnds/image_" + imageInteger + ".jpg)"
         );
         var nextImage = 0;
         $("#altBg").css("background-image", "url(../bkgnd/images/image_0.jpg");
@@ -26,12 +26,12 @@ function randImage() {
       } else {
         $("#bg").css(
           "background-image",
-          "url(http://stuff.ells.family/bkgnds/image_" + imageInteger + ".jpg)"
+          "url(http://stuff.ellzzoo.com/bkgnds/image_" + imageInteger + ".jpg)"
         );
         var nextImage = imageInteger + 1;
         $("#altBg").css(
           "background-image",
-          "url(http://stuff.ells.family/bkgnds/image_" + nextImage + ".jpg)"
+          "url(http://stuff.ellzzoo.com/bkgnds/image_" + nextImage + ".jpg)"
         );
         chrome.storage.sync.set({ imageInteger: nextImage });
       }
